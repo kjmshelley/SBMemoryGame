@@ -55,16 +55,7 @@ function ready() {
     });
     cardContainer.innerHTML = cardsHTML;
 
-    const overlays = document.querySelectorAll(".overlay-text");
     const cards = document.querySelectorAll(".card");
-    const game = new MixOrMatch(100, cardData);
-
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
-            game.startGame();
-        });
-    });
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
